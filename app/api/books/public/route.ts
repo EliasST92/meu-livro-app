@@ -26,7 +26,7 @@ export async function GET() {
     });
 
     const result = await Promise.all(
-      books.map(async (book) => {
+      books.map(async (book: any) => {
         let coverUrl = '';
         if (book.coverStoragePath) {
           try {
